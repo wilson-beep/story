@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莉莉的冒險故事</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 設定字體、背景 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* 導覽列樣式 */
+        #navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #navbar ul {
+            list-style-type: none;
+        }
+
+        #navbar ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        #navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* 頁面內容區 */
+        #content {
+            margin: 20px;
+        }
+
+        /* 每一個場景的樣式 */
+        .scene {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .scene img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Footer 樣式 */
+        #footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* RWD 針對不同螢幕的調整 */
+        @media (max-width: 768px) {
+            #navbar ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 滾動至指定位置的功能
+            document.querySelectorAll('#navbar a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#scene1">場景1</a></li>
+            <li><a href="#scene2">場景2</a></li>
+            <li><a href="#scene3">場景3</a></li>
+            <li><a href="#scene4">場景4</a></li>
+            <li><a href="#scene5">場景5</a></li>
+            <li><a href="#scene6">場景6</a></li>
+            <li><a href="#scene7">場景7</a></li>
+            <li><a href="#scene8">場景8</a></li>
+            <li><a href="#scene9">場景9</a></li>
+            <li><a href="#scene10">場景10</a></li>
+        </ul>
+    </nav>
+
+    <!-- 內容區 -->
+    <div id="content">
+        <div id="scene1" class="scene">
+            <img src="image1.jpg" alt="莉莉的新冒險">
+        </div>
+        <div id="scene2" class="scene">
+            <img src="image2.jpg" alt="和朋友告別">
+        </div>
+        <div id="scene3" class="scene">
+            <img src="image3.jpg" alt="遇到第一個挑戰">
+        </div>
+        <div id="scene4" class="scene">
+            <img src="image4.jpg" alt="找到關鍵的線索">
+        </div>
+        <div id="scene5" class="scene">
+            <img src="image5.jpg" alt="合作的重要性">
+        </div>
+        <div id="scene6" class="scene">
+            <img src="image6.jpg" alt="選擇正確的道路">
+        </div>
+        <div id="scene7" class="scene">
+            <img src="image7.jpg" alt="發現自己的力量">
+        </div>
+        <div id="scene8" class="scene">
+            <img src="image8.jpg" alt="打敗大怪物">
+        </div>
+        <div id="scene9" class="scene">
+            <img src="image9.jpg" alt="分享冒險">
+        </div>
+        <div id="scene10" class="scene">
+            <img src="image10.jpg" alt="莉莉的成長">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2025 所有權利保留</p>
+    </footer>
+</body>
+</html>
